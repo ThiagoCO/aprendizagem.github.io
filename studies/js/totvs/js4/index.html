@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript 4 - JavaScript Errors a JavaScript JSON</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300:400:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+
+    <style type="text/css">
+      *{
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .col-md-6{
+        height: 340px;
+          
+      }
+
+      .pseudo-comment{
+        font: 9px !important;
+        font-family: 'IBM Plex Mono', monospace;
+
+      }
+    
+      .error{
+        background-color: tomato;
+        font: 10px;
+        font-family: 'IBM Plex Mono', monospace;
+      }
+
+      .mostraX{
+        font: 9px !important;
+        font-family: 'IBM Plex Mono', monospace;
+        background: #ecc189;
+      }
+    </style>
+</head>
+<body>
+  <a href="../.."><h5>back</h5></a>
+  <br>
+    <aside class="container-fluid">
+            <h4>JavaScript 4 - JavaScript Errors a JavaScript JSON</h4>
+        <aside class="row">
+            <aside class="col-md-7">
+               Errors
+                <br>
+                <br>
+                <pre>
+try{
+    document.getElementbyId("id-elemento").innerHTML = "teste";
+}
+
+catch(err){
+    console.log("Erro, mensagem apresentada no erro -> " + err);
+}
+                </pre>
+            </aside>
+
+            <aside class="col-md-5">
+                <p class="text-justify">
+                    Uuma estrutura lógica,
+                    interpreta o código, e em caso de erro
+                    executa as instruções do bloco catch, que pode receber
+                    o código do erro ocorrido através do parametro err.
+                </p>
+            </aside>
+        </aside>
+
+<hr>
+        <aside class="row">
+            <aside class="col-md-7">
+                    <pre>
+
+<span class="mostraX">var x = 11;</span>
+
+    try { 
+        if(x == "") throw "empty"; 
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x < 5) throw "too low";
+        <span class="error"></5>if(x > 10) throw "too high"; </span>  
+    }                                
+    catch(err) {                     
+        message.innerHTML = "Input is " + err;
+    } 
+}
+                            
+                    </pre>
+            </aside>
+
+            <aside class="col-md-5">
+                <p class="text-justify">
+                    Através do Throw, você pode criar seus própios erros,
+                    como esse exemplo.
+
+                    <br><br><br><br><br>
+                    <span class="pseudo-comment"><span class="mostraX">//Nosso X é maior que 10</span></span><br>
+                    <span class="pseudo-comment"><span class="error">//Nesse ponto</span> o programa será</span><br>
+                    <span class="pseudo-comment">//interrompido com o erro 'too high'</span>
+                </p>
+            </aside>
+        </aside> 
+
+
+        <hr>
+
+
+        <aside class="row">
+            <aside class="col-md-7">
+                <h4>Putting the erros in a JSON file</h4>
+            </aside>
+
+            <aside class="col-md-5">
+
+            </aside>
+        </aside>
+    </aside>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!-- CDN'S BASES -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

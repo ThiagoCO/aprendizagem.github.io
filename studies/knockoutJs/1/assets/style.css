@@ -1,0 +1,26 @@
+.col-md-4{
+    float: left !important;
+    position: relative;
+
+    margin-bottom: 30px;
+   
+}
+
+section{
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+
+    
+}
+
+.btn-delete{
+    position: relative;
+    left: 96%;
+}
+
+address{
+    margin: 0;
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>108_navbar</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+    *{
+      font-family: 'Roboto', sans-serif;
+     }
+
+     body{
+      background:#FEEEEE;
+      padding: 20px;
+      }
+    </style>
+</head>
+<body>
+  <a href="../"><h4>back</h4></a>
+	     <aside class="page-header">
+        <h3 >Modal Windows</h3> 
+       </aside>
+       <br><br>
+        <aside class="container">
+          <aside class="row">
+            <aside class="col-md-4">
+           <button class="btn btn-primary" data-toggle="modal" data-target="#loginWindow">Sign-in</button>
+        </aside>
+        <aside class="col-md-4">
+          <button class="btn btn-default" data-toggle="modal" data-target="#about">Tabela</button>
+        </aside>
+        <aside class="col-md-4">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#signupWindows">Sign-up</button>
+        </aside>
+        </aside>
+        <aside class="row" style="margin-top: 30px;">
+          <aside class="col-md-4">
+            <h4>Modal Button</h4>
+            &#x3C;button class="btn btn-primary" data-toggle="modal" data-target="#loginWindow">Sign-in&#x3C;/button>
+          </aside>
+          <aside class="col-md-8">
+            <h4>Modal, only appear when button is pressed</h4>
+          <aside>&#x3c;aside class="modal fade" id="loginWindow"></aside>
+         <aside>&#x3c;aside class="modal-dialog modal-md"></aside>
+          <aside>&#x3c;form method="POST" action="cadastra.php"></aside>
+            <aside>&#x3c;aside class="modal-content"></aside>
+            <br>
+              <b><aside>&#x3c;!--header--></aside></b>
+              <aside>&#x3c;aside class="modal-header"></aside>
+                <aside>&#x3c;button class="close" data-dismiss="modal"><aside>&#x3c;span>&times;<aside>&#x3c;/span><aside>&#x3c;/button></aside>
+              <aside>&#x3c;/aside></aside>
+              <br>
+              <b><aside>&#x3c;!-- body --></aside></b>
+              <aside>&#x3c;aside class="modal-body"></aside>
+                <aside>&#x3c;aside class="form-group"></aside>
+                  <aside>&#x3c;input type="email" required="_required" class="form-control" id="email" name="email" placeholder="Insira o seu email"></aside>
+                <aside>&#x3c;/aside></aside>
+                <br>
+                <aside>&#x3c;aside class="form-group"></aside>
+                  <aside>&#x3c;input type="password" required="required" class="form-control"  id="email" name="email" placeholder="Insira a sua senha"></aside>
+                <aside>&#x3c;/aside></aside>
+                <br>
+                <aside>&#x3c;aside class="form-group"></aside>
+                  <aside>&#x3c;form method="POST" action="cadastra.php"></aside>
+                  <aside>&#x3c;input type="submit" class="btn btn-success" name="btnCadastra" value="Login"></aside>
+                  <aside>&#x3c;button class="btn btn-default" style="position: relative; align-self: auto;" data-dismiss="modal">Cancel&#x3c;/button></aside>
+                <aside>&#x3c;/aside></aside>
+
+              <aside>&#x3c;/aside>
+          </aside>
+        </aside>
+        </aside>
+        <!-- -->
+        <aside class="modal fade" id="about">
+          <aside class="modal-dialog modal-md">
+            <aside class="modal-content">
+              <aside class="modal-header">
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+              </aside>
+              <aside class="modal-body">
+                    <table class="table table-striped table-bordered table-hover">
+           <thead>
+               <tr>
+                   <th>Produto</th>
+                   <th>Fabricante</th>
+                   <th>Preço</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr class="table-success">
+                   <td>Notebook 980</td>
+                   <td>HP</td>
+                   <td>R$ 1,800.00</td>
+               </tr>
+               <tr class="table-danger">
+                   <td>Macbook Air</td>
+                   <td>Apple</td>
+                   <td>R$ 18,000.00</td>
+               </tr>
+               <tr class="table-warning">
+                   <td>Lenovo T440</td>
+                   <td>Lenovo</td>
+                   <td>R$ 1,500.00</td>
+               </tr>
+           </tbody>
+       </table>
+              </aside>
+              <aside class="modal-footer">
+                Vitor Tecidos &reg;
+              </aside>
+            </aside>
+          </aside>
+        </aside>
+
+
+       <!-- login window -->
+       <aside class="modal fade" id="loginWindow">
+         <aside class="modal-dialog modal-md">
+          <form method="POST" action="cadastra.php">
+            <aside class="modal-content">
+              <!--header-->
+              <aside class="modal-header">
+                <button class="close" data-dismiss="modal"><span>&times;</span></button>
+              </aside>
+              <!-- body -->
+              <aside class="modal-body">
+                <aside class="form-group">
+                  <input type="email" required="_required" class="form-control" id="email" name="email" placeholder="Insira o seu email">
+                </aside>
+
+                <aside class="form-group">
+                  <input type="password" required="required" class="form-control" id="email" name="email" placeholder="Insira a sua senha">
+                </aside>
+
+                <aside class="form-group">
+                  <form method="POST" action="cadastra.php">
+                  <input type="submit" class="btn btn-success" name="btnCadastra" value="Login">
+                  <button class="btn btn-default" style="position: relative; align-self: auto;" data-dismiss="modal">Cancel</button>
+                </aside>
+
+              </aside>
+              <!-- footer -->
+              <aside class="modal-footer" style="font-size: 13px;">
+                Cadastro 1.0
+              </aside>
+            
+            </aside>     <!-- Modal content -->
+            </form>
+            </aside>       <!-- Modal dialog -->
+       </aside>
+
+       <!-- signup windows -->
+       <aside class="modal fade" id="signupWindows">
+         <aside class="modal-dialog modal-md">
+          <aside class="modal-content">
+           <aside class="modal-header">
+             <button class="close" data-dismiss="modal"><span>&times;</span></button>
+           </aside>
+           <aside class="modal-body">
+
+             <aside class="form-group">
+               <input type="text" required="required" placeholder="Insira seu Nome" name="name" class="form-control">
+             </aside>
+
+             <aside class="form-group">
+               <input type="text" required="required" placeholder="Insira seu Sobrenome" name="surname" class="form-control">
+                </aside>
+
+              <aside class="form-group">
+              <input type="email" required="required" placeholder="Insira seu Email" name="email" class="form-control">
+              </aside>
+
+              <aside class="form-group">
+              <input type="password" required="required" placeholder="Insira sua senha" name="password" class="form-control">
+              </aside>
+
+              <button class="btn btn-success">Cadastrar</button>
+              <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+           </aside>     
+
+           <aside class="modal-footer">
+             Cadastro 1.0
+           </aside>
+         </aside>
+         </aside>
+       </aside>
+
+       </body>
+         <!-- CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</html> 

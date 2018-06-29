@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style type="text/css">
+
+    body{
+        background-color:#eff1e6 !important;
+        padding: 20px;
+    }
+
+    .btns{
+        padding: 5px;
+    }
+
+    .blue{
+        color: blue;
+    }
+
+    .left{
+        left: 10px;
+        position: relative;
+    }
+
+    .textStyle{
+        font-weight: bolder;
+    }
+
+    .output{
+        width:300px;
+        height: 300px;
+        
+        padding: 30px;
+        color: white;
+        background: tomato;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+    <aside class="container">
+        <a href="../"><h3>Back</h3></a>
+        <aside class="row">
+            <aside class="col-md-6" style="margin-bottom: 50px">
+
+                <h4>Array Simples</h4><br><br>
+                <aside class="textStyle">lista_compras = Array();</aside>
+                <aside class="textStyle">lista_compras[0] = 'Banana';</aside>
+                <aside class="textStyle">lista_compras[1] = ' Refrigerante';</aside>
+                <aside class="textStyle">lista_compras[2] = ' Doces';</aside> 
+
+                <br>
+                <aside class="textStyle blue">for (var i = 0; i <= lista_compras.length; i++) {</aside>
+                <aside class="textStyle blue left">document.getElementById("#outputText").(i + " " + lista_compras[i] + "&#x3C;br&#x3E;");</aside>
+                <aside class="textStyle blue">}</aside>
+                <br>
+                <br>
+
+                <div name="text" class="output" id="outputText">
+                    
+                </div>
+            </aside>
+
+            <aside class="col-md-6">
+                
+             <aside class="btns"><button onclick="mostraArray();" class="btn btn-default">alert(lista_compras);</button></aside>
+             <aside class="btns"><button onclick="mostraArray0();" class="btn btn-default">alert(lista_compras[0]);</button></aside>
+             <aside class="btns"><button onclick="mostraArray1();" class="btn btn-default">alert(lista_compras[1]);</button></aside>
+             <aside class="btns"><button onclick="mostraArray2();" class="btn btn-default">alert(lista_compras[2]);</button></aside>
+             <aside class="btns"><button onclick="mostraArray3();" class="btn btn-default">alert(lista_compras[3] + ' hue');</button></aside>
+             <aside class="btns"><button onclick="mostraArrays();" class="btn btn-primary">laço for</button></aside>
+            
+            </aside>
+            
+        </aside> <!-- Row -->
+    </aside> <!-- Container -->
+</body>  
+    <script type="text/javascript">
+        lista_compras = Array();
+        lista_compras[0] = 'Banana';
+        lista_compras[1] = 'Refrigerante';
+        lista_compras[2] = 'Doces';
+        
+        function mostraArray(){
+            alert(lista_compras);
+        }
+
+        function mostraArray0(){
+            alert(lista_compras[0]);
+        }
+
+        function mostraArray1(){
+            alert(lista_compras[1]);
+        }
+
+        function mostraArray2(){
+            alert(lista_compras[2]);
+        }
+
+        function mostraArray3(){
+            alert(lista_compras[3] + ' hue');
+        }
+
+        function mostraArrays(){
+            for (var i = 0; i <= lista_compras.length; i++) {
+                document.getElementsByName("text").innerHTML += i + " " + lista_compras[i] + "<br>";
+            }
+        }
+
+    </script>
+
+    <!-- CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

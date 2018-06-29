@@ -1,0 +1,117 @@
+<html lang='en'>
+<head>
+  <title>Animating Knockout.js</title>
+  <meta charset='utf-8' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+  
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <a href="../">back</a>
+              <table id="table" class="table">
+                <thead><tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Details</th>
+                </tr></thead>
+                <tbody data-bind='foreach:{
+                        data: items,
+                        beforeRemove: hideProduct,
+                        afterAdd    : showProduct
+                    }'>
+                  <tr>
+                    <td data-bind='text: name'></td>
+                    <td data-bind='text: price'></td>
+                    <td data-bind='text: details'></td>
+                    <td><button data-bind='click: $root.removeProduct'>Remove</button></td>
+                  </tr>
+                </tbody>
+              </table>
+             
+              <button data-bind='click: addProduct' style="font-size: 15">Add Beer</button>
+              <input type="text" onkeyup="catchBeerType()" data-bind="value: beerType" style="font-size: 15;margin-left: 10px;" placeholder="type of beer" id="beer-type">
+              <input type="text" onkeyup="catchBeerPrice()" data-bind="value: beerType" style="font-size: 15;margin-left: 10px;" placeholder="price of beer" id="beer-price">
+            
+          </div>
+        
+          <div class="col-md-4">
+        
+          </div>
+        </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/2.1.0/knockout-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+    
+    var beerType;
+    var beerPrice;
+
+    function catchBeerType(){
+      beerType = $("#beer-type").val();
+      console.log(beerType);
+    }
+    
+    function catchBeerPrice(){
+      beerPrice = $("#beer-price").val();
+      console.log(beerPrice);
+    }
+    
+
+    function Product(name, price, details, tags, discount){
+      this.name     = ko.observable(name);
+      this.price    = ko.observable(price);
+      this.details  = ko.observable(details);
+    }
+
+    function ShoppingCart(){
+        
+      var self = this;                                                  //Gambiarra
+      this.instructions = ko.observable("");
+      this.hasInstructions = ko.observable(false);
+      
+        
+      this.items = ko.observableArray([
+        new Product("Beer", 10.99,  "Lager"),
+        new Product("Beer", 7.99,   "American Imperial Porter"),
+        new Product("Beer", 1.49,   "Corn Beer"),
+      ]);
+ 
+      this.addProduct = function(){
+        this.items.push(new Product("Beer", beerPrice, beerType));
+        
+        console.log("Added 1");
+        console.log(this.beerType);
+
+        $("#beer-type").val("");
+        $("#beer-price").val("");
+      };
+ 
+      this.removeProduct = function(product){
+        self.items.destroy(product);                                    //Gambiarra
+
+         console.log("Removed 1");
+      };
+
+      this.showProduct = function(element) {
+        if (element.nodeType === 1) {
+            $(element).hide().fadeIn();
+        }
+       };
+
+      this.hideProduct = function(element) {
+        if (element.nodeType === 1) {
+            $(element).fadeOut(function() { $(element).remove(); });
+        }
+      };
+
+    };
+
+    ko.applyBindings(new ShoppingCart());
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>168_form_events</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+
+
+    body{
+        background: #339999;
+      }
+
+     .output{
+        color: white;
+        width: 200px;
+        height: 100px;
+        background: #343d46;
+        padding: 27px;
+        padding-top: 35px;
+        text-align: center;
+        font-weight: bolder;
+        margin-top: 40px;
+        margin-bottom: 30px;
+     }
+
+     .codeText{
+      position: relative;
+        font-weight: bolder;      
+        color: #2b2b2b;
+      }
+
+     .left{
+      position: relative;
+      left: 15px;
+     }
+
+     .row{
+      background: white;
+      padding: 19px;
+     }
+
+     a{
+      color: white;
+     }
+
+     a:hover{
+      color:white;
+     }
+
+     .title{
+      color: white;
+      width:100%;
+      background:#343d46;
+      padding:10px;
+      margin-top: 23px;
+      margin-bottom: 23px;
+     }
+
+     .select{
+      margin-bottom: 40px;
+     }
+    </style>
+</head>
+<body>
+  <a href="../"><h5>back</h5></a>
+
+      <aside class="container">
+        <aside class="row">
+          
+          <aside class="col-md-6">
+          <aside class="title"><h4>onFocus</h4></aside>
+             
+              <form id="theForm" class="onFocus">
+                
+                <aside class="form-group">
+                  <label for="loginInput">Login</label>
+                  <input class="form-control" type="text" id="loginInput" name="loginInput" placeholder="onfocus=''onFocusTestLogin();''" onfocus="onFocusTestLogin();">
+                </aside>
+
+                <aside class="form-group">
+                  <label for="passwordInput">Password</label>
+                  <input class="form-control" type="password" name="passwordInput" id="passwordInput" placeholder="onfocus=''onFocusTestPassword();''" onfocus="onFocusTestPassword();">
+                </aside>
+              </form>
+          
+          </aside>    <!-- End first col-md-6 -->
+
+          <aside class="col-md-6">  <!--Second col-->
+          
+            <aside class="output" id="output"></aside>
+
+            <aside class="codeText ">function onFocusTestLogin(){</aside>
+            <aside class="codeText left">document.getElementById('output')<br>.innerHTML = 'Login Selecionado';</aside>
+            <aside class="codeText ">}</aside>
+
+            <aside class="codeText ">function onFocusTestPassword(){</aside>
+            <aside class="codeText left">document.getElementById('output')<br>.innerHTML = 'Senha selecionada';</aside>
+            <aside class="codeText ">}</aside>
+
+          </aside>  <!-- End Second col -->
+        
+        </aside>  <!-- End row -->
+          
+          <aside class="row">
+
+             <aside class="col-md-6">     <!-- First col-md-6 -->
+              <aside class="title"><h4>onChange</h4></aside>
+
+              <select class="form-control select" onchange="onChangeTest();">
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Opção 3</option>
+                <option value="4">Opção 4</option>
+                <option value="5">Opção 5</option>
+                <option value="6">Opção 6</option>
+              </select>
+
+             <aside class="codeText"> &#x3C;select class="form-control" onchange="onChangeTest();"&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="1"&#x3E;Opção 1&#x3C;/option&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="2"&#x3E;Opção 2&#x3C;/option&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="3"&#x3E;Opção 3&#x3C;/option&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="4"&#x3E;Opção 4&#x3C;/option&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="5"&#x3E;Opção 5&#x3C;/option&#x3E;</aside>
+             <aside class="codeText left"> &#x3C;option value="6"&#x3E;Opção 6&#x3C;/option&#x3E;</aside>
+             <aside class="codeText"> &#x3C;/select&#x3E;</aside>
+
+          
+          </aside>                      <!-- End first col-md-6 -->
+
+          <aside class="col-md-6">      <!--Secondcol-md-6 -->
+            
+            <aside class="output" id="outputT"></aside>
+0
+            <aside class="codeText">var i=<span id="iValue">0</span>;</aside>
+            <br>
+            <aside class="codeText ">function onChangeLogin(){</aside>
+            <aside class="codeText left">i+=1;</aside>
+            <aside class="codeText left">document.getElementById('outputT')<br>.innerHTML = 'Trocado';</aside>
+            <aside class="codeText ">}</aside>
+
+          </aside>                    <!-- End Second col-md-6 -->
+
+          </aside> <!-- Second row -->
+
+      </aside>    <!-- End container-->
+
+      <!-- My JS -->
+      <script type="text/javascript">
+        var i =0;
+
+        function onFocusTestLogin(){
+          document.getElementById('output').innerHTML = 'Login Selecionado';
+        }
+
+        function onFocusTestPassword(){
+          document.getElementById('output').innerHTML = 'Senha selecionada';
+        }
+
+        function onChangeTest(){
+
+          i += 1;
+          document.getElementById('outputT').innerHTML = 'Trocado ' + i + ' vez(es)';
+          document.getElementById('iValue').innerHTML = i;
+        }
+
+     
+
+
+      </script>
+
+    <!-- CDN'S BASES -->
+    <script type="text/javascript" src="bootstrap4.0/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

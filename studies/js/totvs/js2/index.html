@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript 2 - JavaScript Functions a JavaScript Date Methods</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300:400:600" rel="stylesheet">
+    <style type="text/css">
+      *{
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .code{
+            widows: 100%;
+            height: 330px;
+            background-color: #e1dcd9;
+            color: black;
+            font-weight: 400;
+            padding: 20px;
+        }
+        
+        .output{
+            background: #81d8d0;
+        }
+
+        .date-arguments{
+            background: #ffafaf;
+        }
+
+        .date-arguments:hover .date-arguments{
+            background:#ff7777;
+        }
+    </style>
+</head>
+<body>
+  <a href="../.."><h5>back</h5></a>
+  <h4>JavaScript 2 - JavaScript Functions a JavaScript Date Methods</h4>
+    <aside class="container-fluid">
+        <aside class="row">
+
+            <aside class="col-md-6">
+                <aside class="code text-justify">
+                    <b>The code</b>
+                    <br><br>
+                    var d = new Date();
+                    <br>
+
+                    <span class="date-arguments ">var da = new Date(2012, 11, 24, 10, 33, 30, 5200);</span>
+                    <br>
+
+                    <span class="date-year">var dYear = new Date().getFullYear;</span>
+                    <br>
+
+                    <span class="date-hour">var dHour = new Date().getHours;</span>
+                    <br>
+
+                </aside>
+            </aside>
+
+            <aside class="col-md-6">
+                    <aside class="code output text-justify">
+                        <b>The outputs</b>
+                        <br><br>
+
+                        <span id="d-output"></span>
+                        <br>
+
+                        <span class="date-arguments" id="date-arguments-output"></span>
+                        <br>
+
+                        <span class="date-year" id="date-year"></span>
+                        <br>
+
+                        <span class="date-hour" id="date-hour"></span>
+                        <br>
+                    
+                    </aside>
+                </aside>
+        </aside>
+        <br><br>
+        <aside class="row">
+            <aside class="col-md-6">
+                <b>Some explication</b><br>
+                <span class="date-arguments">
+                new Date(year, month, ...) creates a new date object with a specified date and time.
+                <br><br>
+                7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+                </span>
+            </aside>
+
+            <aside class="col-md-6">
+                
+            </aside>
+        </aside>
+           
+    </aside>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!-- CDN'S BASES -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

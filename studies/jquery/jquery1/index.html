@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TOTVS - JQUERY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+        .tile-content{
+            width: 100%;
+            height: 60vh;
+            padding: 20px !important;
+            background-color:#1a936f;
+            font-weight: bolder;
+            font-size: 13px;
+            color: white;
+        }
+
+        .title{
+            font-size: 19px;
+        }
+        
+        .row{
+            padding-right: 11px;
+            padding-left: 11px;
+        }
+
+        .col-md-4{
+            padding-right: 4px;
+            padding-left: 4px;
+        }
+
+        .jumbotron{
+            width: 100%;
+        }
+
+        .container-fluid{
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .tileAppearChange{
+            color: black !important;
+        }
+
+        pre{
+            color: white !important;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <aside class="container-fluid">
+        <br>
+        <a href="../">Back</a>
+        <aside class="jumbotron">
+            <h1>Jquery Tutorial on w3schools</h1> 
+            <p>jQuery 1 - jQuery Intro a jQuery Events<br>
+                jQuery 2 - jQuery Hide/Show a jQuery Chaining</p> 
+        </aside>
+
+        <aside class="row">
+            <aside class="col-md-4 tile tile-appear">
+                <aside class="tile-content">
+                    <p class="title">Code</p>
+                    <small>.tile .tile-appear</small>            
+                    <p class="text-justify">
+<pre>
+var tileHide = $(".tile-hide");
+var tileAppear = $(".tile-appear");
+
+var nHideElements = 0;
+
+tileHide.click(function(){      
+    $(this).hide();
+    nHideElements++;
+});
+
+tileAppear.click(function(){      
+    $(tileHide).show();       
+});
+</pre>
+
+Deleted times : <span id="nHideElementsShow"></span>
+
+                    </p>
+                </aside>
+            </aside>
+
+            <aside class="col-md-4 tile tile-hide">
+                <aside class="tile-content">
+                    <p class="title">Teste Jquery2</p>
+                    <small>.tile .tile-hide</small>            
+                    <br>
+                </aside>
+            </aside>
+
+            <aside class="col-md-4 tile tile-hide">
+                <aside class="tile-content">
+                    <p class="title">Teste Jquery3</p>
+                    <small>.tile .tile-hide</small>
+                    <br>
+                </aside>
+            </aside>
+        </aside>
+    </aside>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var tileHide = $(".tile-hide");
+        var tileAppear = $(".tile-appear");
+
+        var nHideElements = 0;
+        
+        tileHide.click(function(){      
+            $(this).hide();
+
+            nHideElements++;
+            document.getElementById("nHideElementsShow").innerHTML = nHideElements;
+        });
+
+        tileAppear.click(function(){      
+            $(tileHide).show();
+            $(tileAppear).addClass('tileAppearChange');
+            
+            document.getElementById("nHideElementsShow").innerHTML = nHideElements;
+        });
+
+        tileAppear.dblclick(function(){
+           console.log("Duplo clique");
+           alert("tileAppear.dblclick(function(){ alert(); });");
+        });
+    
+    </script>
+</html>

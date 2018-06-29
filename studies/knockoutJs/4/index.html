@@ -1,0 +1,156 @@
+<html>
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<title>Example: View Model</title>
+	<style>
+		ul{
+			list-style: none;
+			display: inline-block;
+			position: relative;
+
+			left: 50%;
+			transform: translate(-50%,0%);
+		}
+
+		li{
+			float: left;
+			width: auto;
+			padding: 10px;
+		}
+
+		.form-control{
+			margin-bottom: 10px;
+		}
+	</style>
+	<meta name="viewport" content="initial-scale=1">
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+		<aside class="modal fade" id="loginWindow">
+				<div class="modal-dialog modal-md">
+					<div class="modal-content">
+
+						<div class="modal-header">
+							<h5 class="modal-title">Add</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								  </button>							
+						</div>
+
+						<div class="modal-body">
+							<input class="form-control" placeholder="First Name" data-bind="value: firstName">
+							<input class="form-control" placeholder="Last Name" data-bind="value: lastName"><br>
+							<center><button class="btn btn-outline-success" data-dismiss="modal">Confirmar <span data-bind="text: firstName"> </span> <span data-bind="text: lastName"></span></button></center>
+						</div>
+
+					</div>
+				</div>
+			</aside>
+
+	<div class="row">
+		
+		<div class="col-md-6">
+			<a href="../">back</a>
+			<h1>Welcome <span data-bind="text: firstName"></span> <span data-bind="text: lastName"></span></h1>
+			<br><br>
+
+
+			
+
+
+		
+			<ul>
+				<li><button id="master-btn" class="btn btn-outline-primary">The master</button></li>
+				<li><button id="legend-btn" class="btn btn-outline-primary">The legend</button></li>
+				<li><button class="btn btn-outline-primary" data-toggle="modal" data-target="#loginWindow">Know Another ?</button></li>
+			</ul>
+		</div>
+
+		<div class="col-md-6">
+			
+		</div>
+	</div>
+	
+
+</div>
+	<script>
+		var legendBtn = $("#legend-btn");
+		var masterBtn = $("#master-btn");
+		var self = this;
+
+		
+		function myViewModel(){
+			this.firstName = ko.observable("Zakk");
+			this.lastName = ko.observable("Wylde");
+			
+			// this.fullName = ko.computed(function(){
+			// 	return firstName() + " " + lastName();
+			// })
+
+		
+		}
+
+		legendBtn.click(function(){
+				
+		});
+			
+			
+		masterBtn.click(function(){
+				this.firstName("Jimi");
+				this.lastName("Hendrix");
+		});
+	
+
+
+
+		
+		ko.applyBindings(myViewModel);
+
+		
+	</script>
+	<!--
+	<h1>Welcome <span data-bind="text: firstName"></span> <span data-bind="text: lastName"></span></h1>
+	<label>First Name:</label> 
+	<input type="text" data-bind="value: firstName"> 
+	<label>Last Name:</label> 
+	<input type="text" data-bind="value: lastName">
+	<br><br>
+	<button>Change</button>
+<script>
+
+	var myViewModel = {
+		firstName:ko.observable('Mike'),
+		lastName: ko.observable('Doe')
+	}
+
+	$('button').click(function(){
+		myViewModel.firstName('George');
+		myViewModel.lastName('Williams');
+	});
+
+	myViewModel.firstName.subscribe(function(newValue){
+		alert("The users first name is now "+newValue);
+	});
+
+	myViewModel.firstName.subscribe(function(oldValue){
+		alert("The users previous name was "+oldValue);
+	},null, "beforeChange");
+
+	ko.applyBindings(myViewModel);
+
+</script>
+-->
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</html>
+
+
+
+

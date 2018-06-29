@@ -1,0 +1,156 @@
+*{
+	font-family: arial;
+	margin:  0;
+	padding:  0;
+	box-sizing:  border-box;
+	
+}
+body{
+
+	background-image:  url("../pictures/background.jpg");
+	background-size: cover;
+	min-width: 1000px;
+}
+.rigth{
+
+	
+	width: 10%;
+	min-width: 100px;
+	height: 800px;
+	float: right;
+}
+
+.center{
+	background-color: white;
+	width: 80%;
+	min-width: 800px;
+	height: 800px;
+	float: right;
+	
+}
+
+.left{
+
+	min-width: 100px;
+	width: 10%;
+	height: 800px;
+	float: right;
+}
+
+.menu{
+	min-width: 800px;
+	width: 80%;
+	height: 49px;
+	background-color: #009582 ;
+	left: 10%;
+	position: relative;
+ 	
+
+}
+.options{
+min-width: 800px;
+	position: relative;
+	
+	background-color: #009582 ;
+}
+.logo{
+	background-color: #009582;
+	top: 20px;
+	position: relative;
+	width: 30%;
+	
+
+}
+/* #00594d DARKER 
+    #009582 AFPESP LOGO COLOR*/
+.title{
+
+	width: 80%;
+	position: relative;
+	align-content: center;
+	height: 180px;
+	background-color: #009582;
+	left: 10%;
+	opacity: 0.8;
+
+	min-width: 800px;
+
+}
+
+.descr{
+	width: 56%;
+	max-width: 700px;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	left: 35%;
+	bottom: 40%;
+	font-size: 23px;
+	background-color: #009582;
+
+	
+}
+
+ul {
+    list-style-type: none;
+
+    overflow: hidden;
+   background-color: #009582 ;
+
+}
+.title, a { text-decoration: none;}
+li {
+    float: left;
+     background-color:#256A3E;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+     background-color:#009582;
+}
+
+li a:hover {
+    
+	
+	background-color: #00594d ;
+	opacity: 1;
+    }
+
+  
+    .content{
+
+    	width: 100%;
+    	background-color: white;
+    	height: 1200px;
+
+ 	
+    }
+
+    .backTopo{
+	width: 100px;
+	text-align: center;
+	height: 97px;
+	position: fixed;
+	bottom: 30px;
+	right: 12px;
+	background-color:#009582;
+	border-radius: 50%;	
+	color: white;
+	border: 2	px white solid;
+}
+
+.backTopo a{
+	text-decoration: none;
+	color: white;
+	padding: 18px;
+}
+
+.textBack{
+	position: relative;
+	top: 35px;
+}
+    /* *********************** FIM DA BASE NAO MECHER ACIMA******************************/

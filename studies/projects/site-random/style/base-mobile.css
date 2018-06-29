@@ -1,0 +1,82 @@
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+ 
+ *{
+ 	border:0 !important;
+ 	box-sizing: border-box;
+ }
+ body{
+ 	margin: 0 !important;
+ }
+
+
+.content{
+	border-radius: 0 !important;
+}
+
+.header-content{
+	width: 100%;
+	height: 95vh;
+	background:url(../imgs/header-banner-mobile.png);
+	text-align: center;
+	opacity: 0.8 !important;
+	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.header-text{
+	top: 200px;
+}
+
+.header-slogan{
+	text-align: center;
+	word-spacing: 0;
+}
+  
+.header-button{
+	position: absolute;
+	left: 50%;
+	top: 430px;
+
+}
+
+.team-list li{
+	transform: translate(-50%,0%);
+	left: 50%;
+	position: relative;
+	float: left;
+	width: 250px !important;
+	margin-bottom: 37px;
+}
+
+.about{
+	width: 100%;
+	position: relative;
+	height: 1600px !important;
+}
+
+.about-content{
+	width: 100%;
+	height: 1600px !important;
+}
+
+.portfolio{
+	background-color: white !important;
+}
+
+}  /*Portrait end */
+
+
+
+
+
+
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape)  {
+ 
+ body{
+ 	margin: 0 !important;
+ }
+
+}

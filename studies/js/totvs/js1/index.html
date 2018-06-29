@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JavaScript 1 - JavaScript Introduction a JavaScript Data Types</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+        
+        input[type="text"]{
+            float: left;
+        }
+
+        .radio-type{
+           
+        }
+        
+        .text-position{
+            width: 70% !important;
+            float: left;
+        }
+
+        .radio-position{
+            width: 30% !important;
+            float: left;
+        }
+
+        .col-md-6 a{
+            color: antiquewhite !important;
+            font-weight: bolder;
+        }
+
+        .output{
+            widows: 100%;
+            height: 330px;
+            background-color: #fe4a49;
+            color: antiquewhite;
+            font-weight: bolder;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+  <a href="../.."><h5>back</h5></a>
+    <aside class="container-fluid">
+        <br><br>
+        <aside class="row">
+            
+            <aside class="col-md-6">
+                <h5>JavaScript 1 - JavaScript Introduction a JavaScript Data Types</h5>
+                <br>
+                
+                  <div class="form-group">
+                    
+                    <aside class="text-position">
+                        <input type="text" class="form-control" id="thing1" onkeyup="catchData1()" placeholder="Enter something">
+                    </aside>    
+                    
+                    <aside class="radio-position">
+                        <ul class="radio-type-1" id="radio-1">
+                            <li><input type="radio" name="option1" id="data-type-1" value="1"> String</li>
+                            <li><input type="radio" name="option1" id="data-type-1" value="2"> Number</li>
+                        </ul>
+                    </aside>
+                  </div>
+
+                  <div class="form-group">
+                    
+                    <aside class="text-position">
+                        <input type="text" class="form-control" id="thing2" onkeyup="catchData2()" placeholder="Enter something">
+                    </aside>
+                    
+                    <aside class="radio-position">
+                        <ul class="radio-type-2" id="radio-2">
+                            <li><input type="radio" name="option2" id="data-type-2" value="1"> String</li>
+                            <li><input type="radio" name="option2" id="data-type-2" value="2"> Number</li>
+                        </ul>
+                    </aside>
+                  </div>
+                  <small>Lembrando que numero podem ser tratados como string<br>Mas strings não podem ser tratadas como numeros</small><br><br>
+                  <center>
+                       
+                    <!--<a onclick="calc()" class="btn btn-primary">Sum / Concat</a>-->
+                  </center>
+                  
+               
+            
+            </aside>
+
+            <aside class="col-md-6">
+               <aside class="output text-justify">
+                    <p>Thing 1 -> <span id="thing1-output"></span></p>
+                    <p>Thing 2 -> <span id="thing2-output"></span></p>
+                    <br>
+                    <p>Output -> <span id="output-text"></span></p>
+                    <br>
+                    <br>
+                    <br>
+                    <br><br>
+                    <small id="warning"></small>
+               </aside>
+            </aside>
+
+        </aside>
+
+
+        <aside class="row">
+            <aside class="col-md-6">
+
+            </aside>
+            
+            <aside class="col-md-6">
+
+            </aside>
+        </aside>
+    </aside>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!-- CDN'S BASES -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

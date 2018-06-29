@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Index /knockoutJs</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+    *{
+      font-family: 'Roboto', sans-serif;
+
+    }
+      body{
+        padding:30px;
+        font-size: 30px;
+        background-color:#eff1e6;
+      }
+
+      li{
+        list-style: none;
+      }
+
+
+      p{
+        margin-top: 20px;
+        font-size: 17px;
+      }
+
+      li a{
+        font-size: 18px;
+      }
+
+      li a:hover{
+        text-decoration: none;
+      }
+
+    </style>
+</head>
+<body>
+  <a href="../">back</a>
+      <aside class="container">
+         <aside class="row" style="margin-top: 30px;">
+          <aside class="col-md-4">
+            <ul>
+              <li><a href="1/" data-bind="text: menu1"></a></li>
+              <li><a href="2/" data-bind="text: menu2"></a></li>
+              <li><a href="3/" data-bind="text: menu3"></a></li>
+              <li><a href="4/" data-bind="text: menu4"></a></li>
+              <li><a href="5/" data-bind="text: menu5"></a></li>
+              <li><a href="" data-bind="text: menu6"></a></li>
+              <li><a href="" data-bind="text: menu7"></a></li>
+              <li><a href="" data-bind="text: fullMenu"></a></li>
+            </ul>
+          </aside> 
+          
+          <aside class="col-md-8" style="font-size: 13.33px">
+<pre>
+function AppViewModel() {
+  this.menu1 = ko.observable("Data Bind Pokedex");
+  this.menu2 =  ko.observable("Animating Knockout");
+  this.menu3 =  ko.observable("Udemy 1");
+  this.menu4 =  ko.observable("Udemy 2");
+  this.menu5 =  ko.observable("Udemy 3");
+  this.menu6 =  ko.observable("...");
+  this.menu7 =  ko.observable("...");
+}
+    
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
+</pre>
+          </aside>
+       </aside>
+    </aside>
+    <!-- Local bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="indexModel.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Index /html5</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+
+    <style type="text/css">
+
+
+        *{
+        font-family: 'Roboto', monospace;
+
+        }
+
+        a{
+            font-size: 30px
+        }
+
+
+        body{
+            padding:20px;
+            background-color:#eff1e6;
+
+            line-height: 29px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+
+        p{
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+
+        li a{
+            font-size: 16px;
+        }
+
+
+        li a:hover{
+            text-decoration: none;
+        }
+      
+
+        h5 a:hover{
+            text-decoration: none;
+        }
+
+
+        .title{
+            font-size: 19px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+
+        .tile-content{
+            width: 100%;
+            height: 320px;
+            padding: 5px 20px;
+            font-family: 'Ubuntu Mono', monospace;
+
+        }     
+
+
+        .example-bg{
+            background-color: #fed766;
+        }
+
+
+        .output-bg{
+            background-color: #e6e6ea;
+        }
+
+
+        .example-bg-2{
+            background-color: #fe4a49;
+        }
+
+
+        .output-bg-2{
+            background-color: #2ab7ca;
+        }
+
+
+        .space{
+            margin-left: 19px;
+        }
+
+        .row{
+            margin-bottom: 40px;
+        }
+
+        textarea{
+            color: black;
+            background-color: #ff7b7a;
+        }
+
+        .area{
+            width: 50%;
+            float: left;
+        }
+
+        textarea {
+            height: 200px;
+            resize: none;
+        }
+
+        @media(max-width: 768px){
+            .row{
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  <a href="../">back</a>
+  <br><br>
+	<aside class="container-fluid">
+    
+        <!--  &#x3c; (<) -->
+	      <aside class="row">
+            <aside class="col-md-6">
+
+                <aside class="example example-bg"> 
+                    <aside class="tile-content">
+                       <span class="title">example</span><br><br>
+                        &#x3c;b> This is a bold text &#x3c;/b><br>
+                        &#x3c;i> This is Italic text &#x3c;/i><br>  
+                        &#x3c;small>This is a Small text&#x3c;/small><br>
+                        &#x3c;del>This is a Deleted text&#x3c;/del><br>
+                        &#x3c;ins>This is a Inserted text&#x3c;/ins><br>
+                        &#x3c;sub>This is a Subscript text&#x3c;/sub><br>
+                        &#x3c;sup>This is a Superscript text&#x3c;&#x3c;/sup><br>
+                        &#x3c;mark>This is a Marked text&#x3c;/mark>
+                    </aside>
+                </aside>
+
+                
+            </aside>
+            
+            <aside class="col-md-6">
+                <aside class="output output-bg">
+                    <aside class="tile-content">
+                        <span class="title">output</span><br><br>
+                        <b>This is a Bold text</b><br>
+                        <i>This is a Italic text</i><br>
+                        <small>This is a Small text</small><br>
+                        <del>This is a Deleted text</del><br>
+                        <ins>This is a Inserted text</ins><br>
+                        <sub>This is a Subscript text</sub><br>
+                        <sup>This is a Superscript text</sup><br>
+                        <mark>This is a Marked text</mark>
+                    </aside>
+                </aside>
+            </aside>
+        </aside>
+
+
+        <aside class="row">
+                <aside class="col-md-6">
+    
+                    <aside class="example example-bg-2"> 
+                        <aside class="tile-content">
+                           <span class="title">live example</span><br>
+                        
+                           <aside class="area text-area">
+                               <br>
+                                <textarea type="text" id="textBox" width="100%" placeholder="Write Here" onkeydown="transform()"></textarea>
+                           </aside>
+
+                           <aside class="area options-area">
+                                <ul id="options">
+                                    <li>Select a type of format</li>
+                                    <li><input name="operation" type="radio" value="1"> &#x3c;b></li>
+                                    <li><input name="operation" type="radio" value="2"> &#x3c;i></li>
+                                    <li><input name="operation" type="radio" value="3"> &#x3c;small></li>
+                                    <li><input name="operation" type="radio" value="4"> &#x3c;del></li>
+                                    <li><input name="operation" type="radio" value="5"> &#x3c;ins></li>
+                                    <li><input name="operation" type="radio" value="6"> &#x3c;sub></li>
+                                    <li><input name="operation" type="radio" value="7"> &#x3c;sup></li>
+                                    <li><input name="operation" type="radio" value="8"> &#x3c;mark></li>
+                           </aside>
+                           
+                        </aside>
+                    </aside>
+    
+                    
+                </aside>
+                
+                <aside class="col-md-6">
+                    <aside class="output output-bg">
+                        <aside class="tile-content">
+                            <span class="title">live output</span>
+                            
+                            <aside id="output" class="text-justify"></aside>
+    
+                        </aside>
+                    </aside>
+                </aside>
+            </aside>
+
+
+    </aside>
+
+    <script type="text/javascript">
+
+        var text;
+
+        function transform(){
+            text = document.getElementById("textBox").value;
+            var options = $('input[name=operation]:checked', '#options').val();
+    
+            if(options==1){
+                document.getElementById("output").innerHTML = "<b>" + text + "</b>";
+                
+            }else if(options==2){
+                document.getElementById("output").innerHTML = "<i>" + text + "</i>";
+                
+            }else if(options==3){
+                document.getElementById("output").innerHTML = "<small>" + text + "</small>";
+                
+            }else if(options==4){
+                document.getElementById("output").innerHTML = "<del>" + text + "</del>";
+                
+            }else if(options==5){
+                document.getElementById("output").innerHTML = "<ins>" + text + "</ins>";
+                
+            }else if(options==6){
+                document.getElementById("output").innerHTML = "<sub>" + text + "</sub>";
+                
+            }else if(options==7){
+                document.getElementById("output").innerHTML = "<sup>" + text + "</sup>";
+                
+            }else if(options==8){
+                document.getElementById("output").innerHTML = "<mark>" + text + "</mark>";
+               
+            }else{
+                document.getElementById("output").innerHTML = text;
+            }
+            
+            
+        }
+    </script>
+    <!-- cdn's -->
+    
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+</body>
+</html>

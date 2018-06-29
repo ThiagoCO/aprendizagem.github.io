@@ -1,0 +1,44 @@
+    
+    *{
+        
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    body{
+        
+        background: url(../imgs/bg2.jpg);
+        background-size: cover;
+    }
+    .formStyle{
+        background: #009582 !important;
+        height: 100vh !important;
+        opacity: 0.93 !important;
+        
+    }
+
+    .formStyle button{
+        opacity: 1 !important;
+    }
+
+    /*@media only screen and (max-width: 500px) {
+    body {
+        background: url(../imgs/background.jpg);
+        opacity: 0.96;
+        
+    }
+}*/
+    
+    .container{
+        height: auto !important;
+    }
+
+    .whiteTitle{
+        color: white;
+    }
+
+    .padding{
+        padding: 10px !important;
+    }
+
+

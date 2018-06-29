@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+ 	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+	<!-- Base CSS -->
+
+	<link rel="stylesheet" type="text/css" href="style/base-pc.css">
+	<link rel="stylesheet" type="text/css" href="style/base-mobile.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Animations -->
+	<link rel="stylesheet" type="text/css" href="style/animations.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<link rel="icon" href="imgs/ico.png" type="image/x-icon">
+
+	<title>Android DevOps</title>
+</head>
+<body>
+
+	<aside class="content">
+        
+			
+	<!--Nav End-->
+
+		<header class="header-content">
+		<h1>
+			<span class="header-text header-title">
+				android c.o.
+			</span>
+
+			<span class="header-text header-slogan">
+				development and consulting
+			</span>
+
+			<a href="#about"><span id="t0" class="header-text header-button">discover us</span></a>
+		</h1>
+	</header>
+
+	<section id="about" class="about">
+		<aside class="about-content">
+			<h1>
+				<span class="about-title">we are</span> 
+			</h1>
+			<aside class="team-list">
+			<center>
+				<ul>
+
+
+					<li><img class="img-fluid rounded-circle" src="imgs/team-img1.jpg">
+
+						<!-- we are title -->
+						<aside class="about-titles">makers</aside>
+						
+						<!-- makers description -->
+						<aside class="about-description">
+							<p>we make ideas come to real applications,<br>
+							 solving people and company problems.</p>
+						</aside>
+					</li>
+					
+					<li><img class="img-fluid rounded-circle" src="imgs/team-img2.jpg">
+
+						<!-- we are title -->
+						<aside class="about-titles">engaged</aside>
+						
+						<!-- engaged description -->
+						<aside class="about-description">
+							<p>face new challenges is the best thing<br>
+							to innovate them, he challenge is what<br>
+							keeps us awake</p>
+						</aside>
+					</li>
+					
+					<li><img class="img-fluid rounded-circle" src="imgs/team-img3.jpg">
+
+						<!-- we are title -->
+						<aside class="about-titles">lovers</aside>
+						
+						<!-- lovers description -->
+						<aside class="about-description">
+						<p>loving what you do makes the results<br>
+						faster and more satisfying. our passion <br>
+						is the solution through digital innovation<br>
+						</p>
+
+						</aside>
+
+					</li>
+				</ul>
+				</center>
+			</aside>
+		</aside>
+	</section><!-- End about section -->
+
+
+
+	<!-- portfolio section -->
+	<section class="portfolio" id="#portfolio" >
+		<aside class="portfolio-content">
+		
+		<h1>
+		<center>
+			<span class="portfolio-title">
+				our jobs
+			</span>
+
+			<span class="portfolio-slogan">
+				< slide >
+			</span>
+			</center>
+		</h1>
+
+		<!-- jquery slider -->
+		<center>
+		 <aside class="slider">
+
+    	   <aside><a href="#portfolio" title="click to see this job"><img src="imgs/slides/image-slider-1.jpg"></a></aside>
+   		   <aside><a href="#portfolio" title="click to see this job"><img src="imgs/slides/image-slider-2.jpg"></a></aside>
+   		   <aside><a href="#portfolio" title="click to see this job"><img src="imgs/slides/image-slider-3.jpg"></a></aside>
+   		   <aside><a href="#portfolio" title="click to see this job"><img src="imgs/slides/image-slider-4.jpg"></a></aside>
+  		 
+  		 </aside>
+  		 </center>
+  		 <!-- slider end -->
+
+		</aside>
+
+	</section> 
+	<!-- portfolio section end -->
+
+
+
+
+
+
+	</aside> <!-- content end -->
+
+</body>
+
+<!-- Scrips -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript"> 
+$(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+
+</script>
+
+</html>

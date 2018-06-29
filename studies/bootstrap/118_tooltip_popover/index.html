@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>118_tooltip_popover</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+    *{
+      font-family: 'Roboto', sans-serif;
+     }
+
+     .btn{
+      margin-bottom: 10px;
+      position: relative;
+      left: 30px;
+     }
+
+    body{
+      background:#FEEEEE;
+      padding: 20px;
+      }
+    </style>
+</head>
+<body>
+  <a href="../"><h4>back</h4></a>
+  <aside class="page-header" style="margin-bottom: 40px;">
+    <h3>Tooltip & Popover</h3> 
+  </aside>
+  <aside class="container">
+  <aside class="row">
+
+  <aside class="col-md-6">
+   <button class="btn btn-default" data-placement="top" data-toggle="tooltip" title="title='' ''">data-placement="top" data-toggle="tooltip"</button>
+   <button class="btn btn-default" data-placement="left" data-toggle="tooltip" title="title='' ''">data-placement="left" data-toggle="tooltip"</button>
+   <button class="btn btn-default" data-placement="right" data-toggle="tooltip" title="title='' ''">data-placement="right" data-toggle="tooltip"</button>
+   <button class="btn btn-default" data-placement="bottom" data-toggle="tooltip" title="title=''' ''">data-placement="bottom" data-toggle="tooltip"</button><br>
+   <button class="btn btn-warning" data-placement="top" data-toggle="tooltip" title="teste">tooltip test</button>
+  <hr>
+  <h5><strong>popover</strong></h5>
+    <br>
+    <button class="btn btn-danger" style="padding: 13px" data-toggle="popover" title="data-toggle=''popover''" data-content="data-content='' '' // // \\ \\ // // \\ \\ // // data-placement=''bottom''" data-placement="bottom">Detalhes</button>
+
+  </aside><!-- Fim primeiro col-md-6 -->
+
+  <aside class="col-md-6">
+    <h6><strong>Add on the final, to tooltip works</strong></h6>
+      <aside>&#x3C;script&#x3E;</aside>
+        <aside>$(function () {</aside>
+        <aside style="left: 20px; position: relative;">$('[data-toggle="tooltip"]').tooltip();</aside>
+        <aside style="left: 20px; position: relative;">$('[data-toggle="popover"]').popover();</aside>
+        <aside style="left: 20px; position: relative;">});</aside>
+    &#x3C;/script&#x3E;
+  <hr>  
+
+</aside>
+
+  </aside> <!-- Row -->
+</aside>
+</body>
+         <!-- CDN -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
+            $('.popover-with-html').popover({ html : true });
+
+        });
+</script>
+
+</html>

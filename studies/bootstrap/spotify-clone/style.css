@@ -1,0 +1,56 @@
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+}
+
+body{
+    background: #2b2b2b;
+    color: white;
+}
+
+.slogan{
+    color:#1db954 !important;
+    font-weight: bolder; 
+}
+
+.redes-sociais li{
+    float: left;
+    margin-right: 30px;
+}
+
+.redes-sociais{
+    position: relative;
+    list-style: none;
+}
+
+.navbar a:hover{
+    color: #1db954 !important;
+}
+
+.navbar-brand a{
+    font-weight: normal;
+}
+
+.navbar a{
+    font-weight: bolder;
+}
+
+.colorMe{
+    color:white !important;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255,102,203);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.black{
+    background: #191414;
+    opacity: 0.7;
+    color: white;
+}

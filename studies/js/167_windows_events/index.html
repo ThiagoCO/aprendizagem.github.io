@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>165_mouse_events</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+      body{
+        background: #7eb4a9;
+      }
+
+      .output{
+        width: 200px;
+        height: 110px;
+        background: white;
+        padding: 27px;
+      }
+
+      .content{
+        padding:20px;
+      }
+
+      .text{
+        font-weight: bolder;
+      }
+
+     
+    </style>
+</head>
+<body onload="onLoadTest();" onresize="onResizeTest();">
+  <a href="../"><h5>back</h5></a>
+      <aside class="container">
+          <aside class="row">
+
+            <aside class="col-md-6">
+              <aside class="content">
+
+                <aside class="text">&#x3C;body onload="<font color="#990000">onLoadTest();</font>" onresize="<font color="#00008b">onResizeTest();</font>"></aside>
+                <br>
+                <br>
+
+                <aside class="text example">function <font color="#990000">onLoadTest()</font>{</aside>
+                <aside class="text example left">document.getElementById('output').innerHTML = "Página carregou !";</aside>
+                <aside class="text example">}</aside>
+
+                <aside class="text example">function <font color="#00008b">onResizeTest()</font>{</aside>
+                <aside class="text example left">document.getElementById('output').innerHTML = "Página foi redimensionada";</aside>
+                <aside class="text example">}</aside>
+
+              </aside>
+            </aside>
+
+            <aside class="col-md-6">
+              <h4>Output</h4>
+              <aside class="output text" id="output"></aside>
+            </aside>
+
+          </aside><!-- End row -->
+      </aside>    <!-- End container-->
+
+      <!-- My JS -->
+      <script type="text/javascript">
+        
+        function onLoadTest(){
+          document.getElementById('output').innerHTML = "Página carregou !";
+        }
+
+        function onResizeTest(){
+          document.getElementById('output').innerHTML = "Página foi redimensionada";
+        }
+      </script>
+
+    <!-- CDN'S BASES -->
+    <script type="text/javascript" src="bootstrap4.0/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

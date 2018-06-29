@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>jQuery 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .tile{
+            width: 130px;
+            height: 130px;
+            
+            color: white;
+            padding: 7px;
+            font-weight: bolder;
+            margin-bottom: 30px;
+        }
+        
+        .btn-primary{
+            background: #177748 !important;
+        }
+        
+        .btn-warning{
+            background: #bf9f48 !important;
+        }
+
+
+        .obj-animated{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background: #c44236;
+            color:#c44236;
+            transition: color 1s;
+            padding: 7px;
+
+        }
+
+        .quad-animated{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background: seagreen;
+            color: white;
+            padding: 7px;
+            font-weight: 400;
+        }
+
+        button{
+            margin-bottom: 6px;
+        }
+
+        .quad-animated-2{
+            background: #057e95;
+        }
+    </style>
+</head>
+  <body>
+    <aside class="container-fluid">
+        <br>
+            <a href="../">back</a>
+        <br><br>
+        <aside class="row">
+            <div class="col-md-4">
+
+                <h4>some awesome actions</h4>
+                <br>
+                <button id="btn-slide-down" class="btn btn-primary">$("#quad1").slideDown(1000);</button><br>
+                
+                <button id="btn-fade-in" class="btn btn-primary">$("#quad2").fadeIn(1000);</button><br>             
+                
+                <button id="btn-fade-out" class="btn btn-primary">$("#quad3").fadeToggle(1000);</button><br>
+                
+                <button id="btn-hide" class="btn btn-warning">$("#code").slideUp();</button><br>
+                
+                <button id="btn-show" class="btn btn-warning">$("#code").slideDown();</button><br>
+                
+                <button id="btn-slide-toggle" class="btn btn-warning">$("#code").slideToggle();</button><br>
+            </div>
+            <div class="col-md-8">
+
+<h4 class="btn-warning">code</h4>
+<pre id="code">
+
+$(function () {
+    $("#btn-slide-down").click(function (event) {
+    $("#div1").slideDown(1000);
+    });
+});
+          
+$(function () {
+    $("#btn-fade-in").click(function (event) {
+    $("#div2").fadeIn(1000);
+    });
+});
+          
+$(function () {
+    $("#btn-fade-out").click(function (event) {
+    $("#div3").fadeToggle(1000);
+    });
+});
+</pre>               
+            </div>
+        </aside>
+
+<br><br><br><br>
+        <div class="row">
+            
+            <div class="col-md-3">
+                <div class="tile btn-primary" id="div1" style="display: none;">1</div>
+
+                <div class="tile btn-primary" id="div2" style="display: none;">2</div>
+
+                <div class="tile btn-primary" id="div3">3</div>
+            </div>
+
+            <div class="col-md-5">
+                <h4>.animate</h4>
+                <br>
+                <pre>
+var objAnimated = $("#obj");
+
+function animateThis(){
+    objAnimated.animate({height:'30px'},1900);
+    objAnimated.css("color","white");
+}
+                </pre>
+            </div>
+
+            <div class="col-md-4">
+                click me<br>
+                <aside id="obj" class="obj-animated" onclick="animateThis()">
+                        $("obj").animate({height:'80px'},1900);
+                        $("obj")objAnimated.css("color","white");
+                    }</aside>
+            </div>
+        </div>
+
+
+        <hr color="black">
+        <h4> Effects</h4>
+        <aside class="row">
+            <aside class="col-md-4">
+                <h5>chaining</h5><br>
+                Writing jQuery statements one at a time (one after the other).
+                However, there is a technique called chaining.<br>
+                <pre>
+
+$(function(){
+    $("#chaining-btn").click(function(event){
+        quadAnimated.animate({top:'-80px'}).fadeOut(1000);
+    })
+});
+                        
+                </pre>
+                
+                <button id="chaining-btn" class="btn btn-success">do it</button>
+                <pre>
+                    
+                </pre>
+            </aside>
+            <aside class="col-md-3">
+                <aside id="quad-animated" class="quad-animated">id="class-animated"</aside><br>
+                <aside id="quad-animated-2" class="quad-animated quad-animated-2">id="class-animated"</aside>
+            </aside>
+            <aside class="col-md-5">
+                <h5>animate and callback</h5><br>
+                Callback is a function who is executed after the animation
+                <br>
+                
+                <pre>
+$(function(){
+    quadAnimatedBtn.click(function(event){
+        quadAnimated.animate({
+            op:'300px',
+        },1200, function(){document.getElementById
+            ("quad-animated").innerHTML += "Callback"}
+        );
+     });
+});
+                </pre>
+                <button id="quad-animated-btn" class="btn btn-success">do it</button>
+            </aside>
+        </aside>
+
+        <hr color="black">
+
+        <aside class="row">
+            <aside class="col-md-6">
+
+            </aside>
+            
+            <aside class="col-md-6">
+                
+            </aside>
+        </aside>
+
+        
+    </aside>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+<script>
+//Effects 
+var quadAnimated = $("#quad-animated");
+var quadAnimatedBtn = $("#quad-animated-btn");
+var quadAnimated2 = $("#quad-animated-2");
+
+/*
+$("button").click(function(){
+    $("div").animate({
+        left: '250px',                  // If element already have
+        height: '+=150px',              // this dimensions pre definied in CSS
+        width: '+=150px'                // you can sum here to preserve the original
+    });                                 // aspect of your design.
+}); 
+
+$("#stop").click(function(){            // The jQuery stop() method is used to stop an 
+    $("#panel").stop();                 // animation or effect before it is finished.
+});                                     // The stop() method works for all jQuery effect functions,
+                                        // including sliding, fading and custom animations.
+*/
+
+
+$(function(){
+    quadAnimatedBtn.click(function(event){
+        quadAnimated.animate({
+            top:'320px',
+        },1200, function(){document.getElementById("quad-animated").innerHTML += "<br><br> Callback"}
+        );
+    });
+});
+
+$(function(){
+    $("#chaining-btn").click(function(event){
+        quadAnimated2.animate({top:'-50px'}).fadeOut(1000);
+    })
+});
+
+var objAnimated = $("#obj");
+
+
+function animateThis(){
+    objAnimated.animate({height:'80px'},1900);
+    objAnimated.css("color","white");
+}
+
+
+$(function () {
+  $("#btn-slide-down").click(function (event) {
+    $("#div1").slideDown(1000);
+  });
+});
+
+
+$(function () {
+  $("#btn-fade-in").click(function (event) {
+    $("#div2").fadeIn(1000);
+  });
+});
+
+
+$(function () {
+  $("#btn-fade-out").click(function (event) {
+    $("#div3").fadeToggle(1000);
+  });
+});
+
+
+$(function () {
+  $("#btn-hide").click(function (event) {
+    $("#code").slideUp();
+  });
+});
+
+
+$(function () {
+  $("#btn-show").click(function (event) {
+    $("#code").slideDown("slow");
+  });
+});
+
+
+$(function () {
+    $("#btn-slide-toggle").click(function(event) {
+        $("#code").slideToggle();
+    });
+});
+</script>
+
+</body>
+</html>

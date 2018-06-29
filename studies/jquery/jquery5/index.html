@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>jQuery 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        
+
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" crossorigin="anonymous">
+  </head>
+  <body>
+    <br>
+    <a href="../">back</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>$.get</h4>
+                <small>to see the code put 10</small><br>
+                <input id="ajax-text" type="text" class="form-control" placeholder="Insira o numero do .txt para fazer request" size="10px">
+                <br>
+                <button id="get-btn">get ajax</button><br>
+                <br>
+                <pre id="code-label">
+
+                </code>
+            </div>
+
+            <div class="col-md-4">
+                <h4>.load</h4>
+                <small>this one catches the error</small><br>
+                <input id="ajax-text-2" type="text" class="form-control" placeholder="Insira o numero do .txt para fazer request" size="10px">
+                <br>
+                <button id="load-btn">load</button>
+                <br>
+
+                <code id="code-label-2">
+
+                </code>
+                
+            </div>
+        </div>
+
+        <hr color="black">
+
+        <div class="row">
+            <div class="col-md-6">
+               <h4>post, http request</h4>
+               <small>Insira um endereço https de um arquivo de texto</small>
+               <input id="ajax-text-3" type="text" class="form-control" >
+               <br>
+               <button id="post-btn">post</button>
+            </div>
+
+            <div class="col-md-6">
+                <button>noConflict</button><br>
+                <pre>
+                    
+$.noConflict();
+jQuery(document).ready(function(){
+    jQuery("button").click(function(){
+        console.log("jquery ta funfando");
+    });
+});
+                </pre>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

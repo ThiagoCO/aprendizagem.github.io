@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>Example: JS Refresher</title>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+	<style>
+		*{
+			font-family: Arial, Helvetica, sans-serif;
+
+		}
+
+		ul{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<a href="../">back</a>
+			<br><br><br>
+			<input class="form-control" id="firstName" type="text" placeholder="firstName"><br>
+			<input class="form-control" id="lastName" type="text" placeholder="lastName"><br>
+				
+			<center>
+				<button class="btn btn-outline-success" id="addPerson">Add</button>
+			</center>
+		</div>
+		<div class="col-md-7">
+			<ul id="people"></ul>
+		</div>
+	</div>
+</div>
+	
+	<script>
+		
+		var firstName = 'Vitor';
+		var lastName  = 'Piovezam';
+		
+		var fullName = firstName + ' ' + lastName;
+		var i;
+
+		var person = {
+			firstName: 'Vitor',
+			lastName:  'Piovezam',
+			age: 29,
+			location: {
+				street: 'Rua Antônio de Couros',
+				number: 98
+			}
+		}
+		
+		var people = [
+			{firstName:'Ian', lastName:'Curtis'},
+			{firstName:'Ian', lastName:'McCulloch'},
+			{firstName:'Ian', lastName:'Brown'},
+			{firstName:'Florian', lastName:'Schneider'},
+			{firstName:'Wolfgang', lastName:'Flur'},
+			{firstName:'Karl', lastName:'Bartos'},
+			{firstName:'Ralf', lastName:'Hutter'},
+		]	
+		
+
+
+		
+		function getRandomColor() {
+  			var letters = '0123456789ABCDEF';
+  			var color = '#';
+			  
+			for (var i = 0; i < 6; i++) {
+    			color += letters[Math.floor(Math.random() * 16)];
+			  }
+			  
+  			return color;
+		}
+
+		function limpaView(obj){
+			console.log("Clean up the " + obj.val());
+			obj.text("");
+			obj.val("");
+			obj.text("");
+			
+		}
+
+
+		function atualizaView(){	//Cleanup the view and write again
+			limpaView($("#people"));					
+
+			$.each(people,function(index,value){
+				console.log(i);
+				i++;
+				$("#people").append("<li>" + value.firstName + " " + value.lastName + "</li>");		
+			});
+
+			console.log(people);
+		}
+		
+
+		$("#addPerson").click(function(){
+			people.push({firstName: $("#firstName").val(), lastName: $("#lastName").val()});
+
+			atualizaView();
+
+			limpaView($("#firstName"));
+			limpaView($("#lastName"));
+		});
+
+
+		atualizaView();
+	</script>
+</body>
+</html>

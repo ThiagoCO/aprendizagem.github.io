@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jQuery Html</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body{
+            background:  #dbdbdb;
+            height: 1600px;
+        }
+
+        .input-invisible{
+            border: 0;
+            background-color: #dbdbdb !important;
+        }
+
+        .space{
+            position: relative;
+            left: 15px;
+        }
+
+        .quad{
+            width: 240px;
+            height: 240px;
+
+            background: #f38630;
+            padding: 20px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+    </style>
+  </head>
+  <body>
+      <br>
+      <a href="../">back</a>
+      <h4>jQuery HTML</h4><br><br>
+        <aside class="container-fluid">
+            <aside class="row">
+                <aside class="col-md-6">
+                        
+                    
+                        <h6>Get/sets/atrr</h6>
+                        <br> 
+                        <input onkeydown="getText()" class="form-control" id="text-sample" type="text" placeholder="Escreva aqui">
+                        <br>
+                        <input type="text" disabled class="form-control input-invisible" id="text-output"></p>
+                    
+
+                    
+
+                    <pre>
+var val;
+var html;
+var text;
+var textSample = $("#text-sample");
+var textOutput = $("#text-output");
+        
+function getText(){
+
+<span class="space">val = textSample.val();</span>
+<span class="space">html = textSample.html();</span>
+<span class="space">text = textSample.text();</span>
+
+<span class="space">console.log("val-> " + val);</span>
+<span class="space">console.log("html  -> " + html);</span>
+<span class="space">console.log("text  -> " + text);</span>
+<span class="space">textOutput.val(val);</span>
+
+<span class="space">console.log("Classe CSS do Input -> " + textSample.attr("class"));</span>
+<span class="space">console.log("Função que este Input está chamando -> " + textSample.attr("onkeyup"));</span>
+<span class="space">console.log("Type do input -> " + textSample.attr("type"));</span>
+}
+        </pre>
+                </aside>
+           
+             
+   
+                <aside class="col-md-6">
+                    
+                    <h6>Changing Atributes with jQuery !</h6><br>
+                    <input type="text" class="form-control" id="change-input" placeholder="Placeholder nativo do código" size="20"><br>
+                    <button id="change-atributes-btn" class="btn btn-success" onclick="setAtributes()" >Change</button>
+
+                    <br><br>
+                    <pre>
+function setAtributes(){ 
+
+var textoPlace = changeInput.val();
+console.log("Texto anterior -> " + textoPlace);
+
+<span class="space">changeInput.attr({</span>
+<span class="space">"placeholder" : textoPlace, // Oque você digitou vira o placeholder</span>
+<span class="space">});</span>
+<span class="space">changeInput.val("");</span> // Reseta o campo
+}
+
+                        
+                    </pre>
+                </aside>
+            </aside><!-- End first row-->
+
+
+            <aside class="row">
+                <aside class="col-md-4">
+                    <br><br>
+                    <h6>Remove and Empty</h6>
+                    <br>
+                    The jQuery <b>empty() method removes the child elements</b> of the selected element, and the <b>remove() method removes the selected element </b>and its child elements.
+                    <br><br><br>
+                    <aside onclick="emptyQuad()" ondblclick="removeQuad()" class="quad" id="quad">
+                        <p>
+                            ondblclick="removeQuad()"<br>
+                            onclick="emptyQuad()"<br><br>
+
+                            $("#quad").remove();
+                            $("#quad").empty();
+                        </p>
+                    </aside>
+                </aside>    
+
+                <aside class="col-md-8">
+                    <br><br>
+                    <h6>CSS Stuff</h6>
+                    <br>
+
+
+                    <b>.addClass</b> implements a CSS class into de element<br><br><br><br>
+                    
+                    <aside onmouseover="addQuadClass()" onmouseout="removeQuadClass()" class="quad" id="quad-2">
+                        <p>
+                                onmousover="removeQuadClass()"<br>
+                                onmouseout="addQuadClass()"<br><br>
+
+                                $("#quad-2").removeClass(".btn-primary");
+                                $("#quad-2").addClass(".btn-primary");
+                        </p>
+                    </aside>
+                </aside>  
+            </aside>
+
+        </aside>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>165_mouse_events</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+
+      body{
+        background-color:#eff1e6;
+      }
+
+      .quad{
+        width: 200px;
+        height: 130px;
+        background-color: #c8515f;
+        padding: 10px;
+        text-align: center;
+        padding-top: 50px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+
+      .textStyle{
+        font-weight: bolder;
+
+      }
+
+      .left{
+        position: relative;
+        left: 15px;
+      }
+
+      @media only screen and (min-width: 800px){
+        .top{
+          margin-top: 90px;
+        }
+      }
+
+      @media only screen and (max-width: 800px){
+        .top{
+          margin-top: 40px;
+        }
+      }
+
+      .teclado{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 5px;
+      }
+
+      a:hover{
+        text-decoration: none;
+      }
+
+    </style>
+</head>
+<body>
+  <a href="../"><h5>back</h5></a>
+  <aside class="teclado"><a href="../166_keyboard_events/index.html">Ir para teclado</a></aside>
+      <aside class="container">
+          <aside class="row">
+            
+            <aside class="col-md-6">
+              <aside class="quad" onclick="clickTest();">
+               onclick=<br>"clickTest();"
+              </aside>
+
+              <aside class="quad" ondblclick="ondbTest();">
+                ondblclick=<br>"ondbTest();"
+              </aside>
+
+              <aside class="quad" onmousedown="onMouseDownTest();">
+                onmousedown=<br>"onMouseDownTest();"
+              </aside>
+
+              <aside class="quad" onmouseover="onMouseOver();">
+                onmouseover=<br>"onMouseOver();"
+              </aside>
+
+              <aside class="quad" onmouseout="onMouseOut();">
+                onmouseout=<br>"onMouseOut();""
+              </aside>
+        
+              </aside>
+
+            <aside class="col-md-6 top">
+
+              <aside class="textStyle">function clickTest(){</aside>
+                <aside class="textStyle left">alert('Você clicou');</aside>
+              <aside class="textStyle">}</aside>
+              <br>
+
+              <aside class="textStyle">function ondbTest(){</aside>
+                <aside class="textStyle left">alert('Você clicou duas vezes');</aside>
+              <aside class="textStyle">}</aside>
+              <br>
+
+              <aside class="textStyle">function onMouseDownTest(){</aside>
+                <aside class="textStyle left">alert('Você acionou');</aside>
+              <aside class="textStyle">}</aside>
+              <br>
+
+              <aside class="textStyle">function onMouseOver(){</aside>
+                <aside class="textStyle left">alert('Você sobrepos');</aside>
+              <aside class="textStyle">}</aside>
+              <br>
+
+              <aside class="textStyle">function onMouseOut(){</aside>
+                <aside class="textStyle left">alert('Você saiu');</aside>
+              <aside class="textStyle">}</aside>
+
+            </aside>
+
+          </aside>  <!-- End row !-->
+      </aside>    <!-- End container-->
+
+      <!-- My JS -->
+      <script type="text/javascript">
+        
+        function clickTest(){         //Clique
+          alert('Você clicou');
+        }
+
+        function ondbTest(){         //Duplo clique
+          alert('Você clicou duas vezes');
+        }
+
+        function onMouseDownTest(){ //Acionado no clique, soltando ou não
+          alert('Você acionou');
+        }
+
+        function onMouseOver(){    //Acionado ao sobrepor do cursor
+          alert('Você sobrepos');
+        }
+
+        function onMouseOut(){    //Acionado quando o cursor sai
+           alert('Você saiu');
+        }
+
+      </script>
+
+    <!-- CDN'S BASES -->
+    <script type="text/javascript" src="bootstrap4.0/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

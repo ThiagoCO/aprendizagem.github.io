@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>166_keyboard_events</title>
+     <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!-- Bootstrap CSS and useful links -->
+    <!-- Local bootstrap -->
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+
+    body{
+      background-color: #a0bbb5;
+    }
+
+    .input{
+      padding:10px;
+
+    }
+
+    .text{
+      position: relative;
+      font-weight: bolder;
+    }
+
+    input{
+      padding: 10px;
+    }
+
+    .color{
+      color: #c8515f;
+    }
+    
+    .left{
+      position: relative;
+      left: 15px;
+      }
+    
+    .pad{
+      margin-top: 20px;
+    }
+
+     .windows{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 5px;
+      }
+    </style>
+</head>
+<body>
+ <a href="../"><h5>back</h5></a>
+  <aside class="windows"><a href="../167_windows_events/index.html">Ir para janelas</a></aside>
+      <aside class="container">
+         <aside class="row">
+
+           <aside class="col-md-6">
+             
+             <aside class="input"><input type="text" name="textBox" placeholder="onKeyDown" onkeydown="onKeyDownTest();"><aside class="text">Ao presionar qualquer Tecla</aside></aside>
+
+             <aside class="input"><input type="text" name="textBox" placeholder="onKeyPress" onkeypress="onKeyPressTest();"><aside class="text">Ao pressionar qualquer letra</aside></aside>
+
+             <aside class="input"><input type="text" name="textBox" placeholder="onKeyUp" onkeyup="onKeyUpTest();"><aside class="text">Ao soltar </aside></aside>
+           </aside>
+
+           <aside class="col-md-6 pad">
+             
+             <aside class="text color">function onKeyDownTest(){</aside>
+              <aside class="text color left">alert("Voce apertou uma tecla");</aside>
+             <aside class="text color">}</aside>
+
+             <aside class="text color">function onKeyPressTest(){</aside>
+              <aside class="text color left">alert("Voce pressionou");</aside>
+             <aside class="text color">}</aside>
+
+              <aside class="text color">function onKeyUpTest(){</aside>
+              <aside class="text color left">alert("Voce soltou uma tecla");</aside>
+             <aside class="text color">}</aside>
+
+           </aside>
+
+         </aside>
+       </aside>
+    </aside>
+
+    <script type="text/javascript">
+
+      function onKeyDownTest(){
+        alert("Voce apertou uma tecla");
+      }
+
+      function onKeyPressTest(){
+        alert("Voce pressionou");
+      }
+
+      function onKeyUpTest(){
+        alert("Voce soltou uma tecla");
+      }
+
+    </script>
+
+    <!-- Local bootstrap -->
+    <script type="text/javascript" src="bootstrap4.0/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>

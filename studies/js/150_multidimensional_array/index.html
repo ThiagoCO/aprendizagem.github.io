@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <style type="text/css">
+
+    body{
+        background-color:#eff1e6 !important;
+    }
+
+    .textStyle{
+        font-weight: bolder !important;
+    }
+
+    .frutas{
+        color: #217ca3;
+    }
+
+    .predios{
+        color: #fc5d3d; 
+    }
+
+    .btn{
+        margin-top: 10px;
+        padding: 10px !important;
+    }
+
+    .btn-predios{
+        background-color: #fc5d3d;
+    }
+
+
+
+    .btn-frutas{
+        background-color: #217ca3;
+    }
+
+
+
+    .left{
+        position: relative;
+        left: 10px;
+    }
+
+
+
+    .local{
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+
+
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>150_multidimensional_array</title>
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+    <aside class="container">
+
+        <a href="../"><h3>Back</h3></a>
+
+       <aside class="row">
+
+           <aside class="col-md-6">
+
+            <aside class="textStyle arrayColor">var lista_coisas = Array();</aside>
+            <br>
+            <aside class="textStyle frutas">lista_coisas['frutas'] = Array();</aside>
+            <aside class="textStyle predios">lista_coisas['predios'] = Array();</aside>
+            <br>
+            <aside class="textStyle frutas ">lista_coisas['frutas'][0] = " Maçã";</aside>
+            <aside class="textStyle frutas">lista_coisas['frutas'][1] = " Pêra";</aside>
+            <aside class="textStyle frutas">lista_coisas['frutas'][2] = " Jabuticaba";</aside>
+            <br>
+            <aside class="textStyle predios">lista_coisas['predios'][0] = " Palácio Luso Junior";</aside>
+            <aside class="textStyle predios">lista_coisas['predios'][1] = " CBI Esplanada";</aside>
+            <aside class="textStyle predios">lista_coisas['predios'][2] = " Copan";</aside>
+            <aside class="textStyle predios">lista_coisas['predios'][3] = " Edificio Itália";</aside>    
+
+            <br>
+
+            <aside><button class="btn btn-frutas textStyle" onclick="mostraFrutas();">mostraFrutas();</button></aside>
+            <aside><button class="btn btn-predios textStyle" onclick="mostraPredios();">mostraPredios();</button></aside>
+
+            <br>
+
+             <aside class="textStyle frutas">function <font color="black">mostraFrutas()</font>{</aside>
+
+             <aside class="textStyle frutas left">document.getElementById('textArea')<br>.innerHTML = lista_coisas['frutas'];</aside>
+             <aside class="textStyle frutas">}</aside>
+
+            <br>
+             <aside class="textStyle predios">function <font color="black">mostraPredios()</font>{</aside>
+             <aside class="textStyle predios left">document.getElementById('textArea')<br>.innerHTML = lista_coisas['predios'];</aside>
+             <aside class="textStyle predios" style="margin-bottom: 50px;">}</aside>
+
+           </aside> <!-- Fecha col -->
+
+
+
+           <aside class="col-md-6">
+
+            <h3>Output</h3>
+
+               <aside class="local" id="textArea">
+
+                   
+
+               </aside>
+
+           </aside>
+       </aside>
+
+    </aside> <!-- Container -->
+
+</body>  
+
+    <script type="text/javascript">
+
+
+
+        var lista_coisas = Array();
+
+        lista_coisas['frutas'] = Array();
+        lista_coisas['predios'] = Array();
+
+        lista_coisas['frutas'][0] = " Maçã";
+        lista_coisas['frutas'][1] = " Pêra";
+        lista_coisas['frutas'][2] = " Jabuticaba";
+
+
+
+        lista_coisas['predios'][0] = " Palácio Luso Junior";
+        lista_coisas['predios'][1] = " CBI Esplanada";
+        lista_coisas['predios'][2] = " Copan";
+        lista_coisas['predios'][3] = " Edificio Itália";
+
+        function mostraFrutas(){
+            document.getElementById('textArea').innerHTML = lista_coisas['frutas'];
+        }
+
+        function mostraPredios(){
+            document.getElementById('textArea').innerHTML = lista_coisas['predios'];
+        }
+    </script>
+
+
+
+    <!-- CDN -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
